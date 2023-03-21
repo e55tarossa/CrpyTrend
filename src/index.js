@@ -10,11 +10,9 @@ import 'antd/dist/antd.css'
 ReactDOM.render(
   //Thêm router để fix thg switch 
   <Router>
-    <React.StrictMode>
       <Provider store={store}>
         <App />
       </ Provider>
-    </React.StrictMode>,
   </Router>,
   document.getElementById('root')
 );

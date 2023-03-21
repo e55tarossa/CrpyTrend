@@ -1,0 +1,15 @@
+:root {
+    /* Colors */
+    --black: #09090c;
+    --grey: #a4b2bc;
+    --white: #fff;
+    --background: rgba(137, 171, 245, 0.37);
+    --background-refect : #f0f2f5;
+  }
+
+  
+  body {
+    /* background-color: var(--background); */
+    background-color: var(--background-refect);
+    font-family: "Poppins", sans-serif;
+  }
