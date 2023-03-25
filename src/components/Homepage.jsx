@@ -56,12 +56,12 @@ const Homepage = () => {
       </Row>
       <div className="flex justify-between items-center mt-5">
         <Title level={2} className="home-title">Top 10 Cryptos In The World</Title>
-        <Title level={3} className="show-more"><Link to="/cryptocurrencies">Show more</Link></Title>
+        <Title level={3} className="mr-2"><Link to="/cryptocurrencies">Show more</Link></Title>
       </div>
       <Cryptocurrencies simplified />
       <div className="flex justify-between items-center mt-5">
         <Title level={2} className="home-title">Latest Crypto News</Title>
-        <Title level={3}><Link to="/news">Show more</Link></Title>
+        <Title level={3} className="mr-2"><Link to="/news">Show more</Link></Title>
       </div>
       <News simplified />
     </>

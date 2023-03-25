@@ -24,10 +24,10 @@ const News = ({simplified}) => {
   return (
     <Row gutter={[24, 24]}>
       {!simplified && (
-        <Col span={24}>
+        <Col span={24} className="flex justify-center m-auto mt-2">
           <Select
             showSearch
-            className="select-news"
+            className="select-news w-[250px] "
             placeholder="Select a Crypto"
             optionFilterProp="children"
             onChange={(value) => setNewsCategory(value)
@@ -41,7 +41,7 @@ const News = ({simplified}) => {
      )}  
       {cryptoNews.value.map((news, i) => (
         <Col xs={24} sm={12} lg={8} key={i}>
-          <Card hoverable className="news-card">
+          {/* <Card hoverable className="news-card">
             <a href={news.url} target="_blank" rel="noreferrer">
               <div className="news-image-container">
                 <Title className="news-title" level={4}>{news.name}</Title>
@@ -56,7 +56,24 @@ const News = ({simplified}) => {
                 <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
               </div>
             </a>
-          </Card>
+          </Card> */}
+          <div class="max-w-md rounded overflow-hidden shadow-lg">
+            <img class="w-full" src={news?.image?.thumbnail?.contentUrl || demoImage} alt=""/>
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">{news.name}</div>
+              <p class="text-gray-700 text-base">
+               {news.description.length > 100 ? `${news.description.substring(0, 100)}...` : news.description}
+               
+              </p>
+              <div>
+                  <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage} alt="" />
+                  <Text className="provider-name">{news.provider[0]?.name}</Text>
+                </div>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{moment(news.datePublished).startOf('ss').fromNow()}</span>
+            </div>
+          </div>
         </Col>
       ))}
     </Row>

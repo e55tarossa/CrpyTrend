@@ -44,7 +44,7 @@ const Button = styled.button`
 const SidebarContainer = styled.div`
   background-color: var(--black);
   width: 5rem;
-  height: 100vh;
+  height: 90vh;
   margin-top: 1rem;
   border-radius: 0 30px 30px 0;
   padding: 1rem 0;
